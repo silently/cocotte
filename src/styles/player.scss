@@ -1,0 +1,157 @@
+.player {
+  width: 360px;
+  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px 0;
+
+  button {
+    position: relative;
+    background: #fafafa;
+    border: 0.5px solid $player-color;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    &.small {
+      border: 0;
+      background: 0;
+      width: 28px;
+      height: 28px;
+    }
+
+    &.show-play {
+      .logo {
+        margin-left: 2px;
+        width: 0;
+        height: 0;
+        border: 8px solid $bg-color;
+        border-left: 11px solid $player-color;
+        border-right: 0;
+      }
+    }
+    &.show-pause {
+      border: 0;
+      background: $player-color;
+      .logo {
+        display: inline-block;
+        width: 10px;
+        height: 12px;
+        background: repeating-linear-gradient(
+          to right,  $bg-color, $bg-color 3px, $player-color 3px, $player-color 7px
+        );
+      }
+    }
+
+  }
+
+  .rewind {
+    position: relative;
+    div {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border: 6px solid transparent;
+    }
+    .logo1 {
+      left: 4px;
+      border-right: 9px solid $player-color;
+      border-left: 0;
+    }
+    .logo2 {
+      left: 11px;
+      border-right: 9px solid $player-color;
+      border-left: 0;
+    }
+  }
+
+  .mute {
+    position: relative;
+    div {
+      position: absolute;
+    }
+    .logo1 {
+      margin-left: -1px;
+      top: 5px;
+      width: 0;
+      height: 0;
+      border: 8px solid $bg-color;
+      border-left: 0;
+      border-right: 11px solid $player-color;
+      background: transparent;
+    }
+    .logo2 {
+      top: 9px;
+      left: 7px;
+      width: 8px;
+      height: 8px;
+      background-color: $player-color;
+    }
+    .bar {
+      display: none;
+      position: absolute;
+      top: 3.5px;
+      left: 0;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      background: linear-gradient(
+        45deg,
+        transparent,
+        transparent 19px,
+        #fafafa 19px,
+        #fafafa 20px,
+        $player-color 20px,
+        $player-color 21.5px,
+        transparent 21.5px,
+      );
+    }
+    &.muted {
+      .bar {
+        display: block;
+      }
+    }
+  }
+
+  input.bpm {
+    text-align: right;
+    width: 35px;
+    color: $info-color;
+  }
+
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button { 
+    appearance: none; 
+  }
+
+  .info {
+    margin-left: -4px;
+    color: $player-color;
+  }
+
+  .help {
+    margin-left: 24px;
+    color: $player-color;
+    background-color: transparent;
+    border: 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .share {
+    color: $player-color;
+    width: 68px;
+    height: 22px;
+    border-radius: 4px;
+
+    &:hover {
+      border-width: 2px;
+    }
+  }
+
+  button:hover {
+    border-width: 2px;
+  }
+}

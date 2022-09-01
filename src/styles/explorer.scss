@@ -1,0 +1,259 @@
+$cell-size: 25px;
+
+.explorer.controller {
+  position: fixed;
+  bottom: 5px;
+  width: $container-width;
+  height: 220px;
+  display: flex;
+
+  button {
+    &:not(.empty) {
+      background: linear-gradient(130deg,
+          darken($ctr-bg-color, 2%),
+          darken($ctr-bg-color, 5%));
+      box-shadow: 0 0 0.5px 0.5px rgba(0, 0, 0, 0.5);
+      border-radius: 3px;
+    }
+
+    $focus-color: darken(#606c76, 12%); //#794c74;
+
+    &.focus {
+      background: linear-gradient(130deg,
+          darken($focus-color, 2%),
+          darken($focus-color, 5%));
+    }
+
+    &.current {
+      color: $bg-color;
+      animation: 700ms ease-in 0s infinite alternate move_focus;
+    }
+
+    &.empty {
+      background: none;
+      cursor: inherit;
+    }
+  }
+
+  &.disabled .focus {
+    box-shadow: none;
+  }
+
+  .chord-heading-container {
+    position: absolute;
+    top: 10px;
+    width: 150px;
+    text-align: center;
+    .explorer-heading {
+      font-variant: small-caps;
+      margin-bottom: 2px;
+    }
+  }
+
+  .group {
+    position: relative;
+    padding: 60px 5px 5px;
+
+    &.group-root {
+      border-left: none;
+    }
+
+    &.group-color,
+    &.group-highlight,
+    &.group-duration {
+      padding-top: 25px;
+    }
+
+    &.group-duration {
+      justify-content: center;
+      flex-grow: 1;
+    }
+
+    [class^="legend-"] {
+      display: flex;
+      position: absolute;
+      z-index: -1;
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 0.6em;
+    }
+
+    &.group-color {
+      .legend-triad-bg {
+        top: 27px;
+        left: 7px;
+        width: 256px;
+        height: 31px;
+        background: $ctr-bg-light-color;
+        color: darken($ctr-bg-color, 10%);
+        text-align: right;
+      }
+
+      .legend-triad {
+        top: 15px;
+        left: 7px;
+        width: 49px;
+        height: 17px;
+        background: $ctr-bg-light-color;
+        color: darken($ctr-bg-color, 10%);
+        flex-direction: column;
+        text-align: center;
+        padding-top: 1px;
+      }
+
+      .legend-omit {
+        top: 61px;
+        right: 7px;
+        width: 48px;
+        height: 113px;
+        background: #999;
+        color: darken($ctr-bg-color, 10%);
+        flex-direction: column;
+        justify-content: flex-end;
+        text-align: center;
+        padding-bottom: 1px;
+      }
+
+      .legend-base-bg {
+        top: 62px;
+        left: 7px;
+        width: 100px;
+        height: 66px;
+        background: $ctr-bg-highlight-color;
+        color: darken($ctr-bg-color, 10%);
+        text-align: right;
+        padding-right: 7px;
+      }
+
+      .legend-base-bg-2 {
+        top: 97px;
+        left: 102px;
+        width: 10px;
+        height: 31px;
+        background: $ctr-bg-highlight-color;
+        color: darken($ctr-bg-color, 10%);
+        text-align: right;
+        padding-right: 7px;
+        border-radius: 0;
+      }
+
+      .legend-base {
+        top: 97px;
+        left: 110px;
+        width: 49px;
+        height: 77px;
+        flex-direction: column;
+        justify-content: flex-end;
+        background: $ctr-bg-highlight-color; //#16a596;
+        color: darken($ctr-bg-color, 10%);
+        text-align: center;
+        padding-bottom: 1px;
+      }
+    }
+
+    &.group-highlight {
+      .legend-string {
+        top: 26px;
+        left: 7px;
+        width: 56px;
+        height: 159px;
+        background: #999;
+        flex-direction: column;
+        justify-content: flex-end;
+        color: darken($ctr-bg-color, 10%);
+        text-align: center;
+        padding-bottom: 1px;
+      }
+
+      .legend-interval {
+        top: 26px;
+        left: 67px;
+        width: 56px;
+        height: 159px;
+        background: #999;
+        flex-direction: column;
+        justify-content: flex-end;
+        color: darken($ctr-bg-color, 10%);
+        text-align: center;
+        padding-bottom: 1px;
+      }
+    }
+
+    .heading {
+      $size: 22px;
+      position: absolute;
+      bottom: 3px;
+      left: 0;
+      width: 100%;
+      height: $size;
+      line-height: $size;
+      font-size: 0.9em;
+      font-weight: 500;
+      color: $bg-color;
+      text-align: center;
+    }
+  }
+
+  .table {
+    display: flex;
+    flex-direction: column;
+
+    .line {
+      display: flex;
+
+      button.item {
+        position: relative;
+        width: $cell-size;
+        height: $cell-size;
+        margin: 5px;
+      }
+    }
+
+    &.color {
+      .line {
+        .item {
+          width: 42px;
+        }
+      }
+    }
+
+    &.voicing {
+      .line {
+        .item {
+          width: 50px;
+        }
+      }
+    }
+
+    &.highlight {
+      .line {
+        .item {
+          width: 50px;
+        }
+      }
+    }
+  }
+
+  .color {
+    .base {
+      font-size: 0.8em;
+    }
+
+    .add {
+      font-size: 0.65em;
+    }
+
+    .exp {
+      font-size: 0.75em;
+    }
+
+    .exp.alt {
+      letter-spacing: -0.1rem;
+    }
+  }
+
+  .voicing,
+  .highlight {
+    font-size: 0.8em;
+  }
+}

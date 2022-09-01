@@ -1,0 +1,26 @@
+
+.nav-container {
+  width: $container-width;
+  display: flex;
+  justify-content: space-between;
+
+  h1 {
+    color: #606c76;
+    font-size: 4.5em;
+    font-weight: 300;
+    .c,
+    .o {
+      letter-spacing: -0.65rem;
+    }
+    .t,
+    .e {
+      letter-spacing: -0.22rem;
+    }
+    .pad {
+      padding-left: 3px;
+    }
+    .c {
+      color: $orange;
+    }
+  }
+}

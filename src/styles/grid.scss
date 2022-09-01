@@ -1,0 +1,137 @@
+$cell-height: 50px;
+$current-bg-color: #40484f;
+
+.grid-container {
+  width: $container-width;
+  position: relative;
+  height: 5 * $cell-height;
+
+  button.delete {
+    margin-top: 12px;
+    color: $player-color;
+    font-size: 0.8em;
+    background-color: transparent;
+    border: 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.grid {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+
+  .title {
+    color: #606c76;
+    font-size: 1.2em;
+    a {
+      color: #606c76;
+      font-style: normal;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    position: absolute;
+    top: -32px;
+    width: 100%;
+    height: 24px;
+    color: $info-color;
+    font-style: oblique;
+    padding-left: 6px;
+  }
+
+  @for $i from 2 through 8 {
+    &.col-#{$i} {
+      width: #{$i * $cell-height * 2};
+    }
+  }
+
+  .cell {
+    position: relative;
+    background: #fff;
+    width: 2 * $cell-height;
+    height: $cell-height;
+    display: flex;
+    border: 1px solid #888;
+    margin-left: -1px;
+    margin-top: -1px;
+    justify-content: center;
+    align-items: center;
+
+    &.current {
+      background-color: $current-bg-color;
+      color: #fff;
+    }
+
+    .dots {
+      position: absolute;
+      top: 2px;
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      .dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #888;
+        &.empty {
+          background-color: $current-bg-color;
+        }
+      }
+    }
+    
+    &:hover {
+      cursor: pointer;
+    }
+
+    &.disabled:hover {
+      cursor: auto;
+    }
+
+    &.fill .chord-container {
+      opacity: 0.4;
+
+    }
+    &.fill.current .chord-container {
+      opacity: 1;
+    }
+    &.fill.disabled {
+      display: none;
+    }
+
+    &.split {
+      position: relative;
+      justify-content: space-between;
+      background-image: linear-gradient(to top left,
+          white 49%,
+          #888,
+          white 51%);
+
+      .chord-container {
+        width: 60%;
+        position: absolute;
+        text-align: center;
+
+        &:first-child {
+          top: -2px;
+          left: 0;
+        }
+
+        enabled &+.chord-container {
+          bottom: -2px;
+          right: 0;
+        }
+
+        .chord {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}

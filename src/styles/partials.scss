@@ -1,0 +1,164 @@
+$pick-size: 50px;
+
+.controller {
+  border: 1px solid darken($ctr-bg-color, 5%);
+  background: $ctr-bg-color;
+  border-radius: 7px;
+  color: $btn-color;
+  font-weight: 400;
+
+  .group {
+    display: flex;
+  }
+
+  &.horizontal {
+    .group {
+      border-left: 1px solid darken($ctr-bg-color, 5%);
+      border-right: 1px solid lighten($ctr-bg-color, 2%);
+
+      &:first-child {
+        border-left: none;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+
+  &.vertical {
+    .group {
+      justify-content: space-between;
+      border-top: 1px solid darken($ctr-bg-color, 5%);
+      border-bottom: 1px solid lighten($ctr-bg-color, 2%);
+
+      &:first-child {
+        border-top: none;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+@keyframes move_focus {
+  from {
+    box-shadow: 0 0 2px 2px rgb(255, 235, 215);
+  }
+
+  to {
+    box-shadow: 0 0 2px 2px rgb(255, 250, 245);
+  }
+}
+
+.color {
+  &.label {
+    display: inline-block;
+    font-size: 2em;
+    padding: 0 8px;
+    background: $bg-color;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .picker {
+    border: 0.5px solid #ddd;
+    background: white;
+    padding: 12px;
+    border-radius: 2px;
+
+    .info,
+    .option {
+      box-sizing: border-box;
+      width: $pick-size;
+      height: $pick-size;
+      line-height: $pick-size;
+      margin: 4px;
+      text-align: center;
+    }
+
+    .info {
+      display: inline-block;
+    }
+
+    .option {
+      display: inline-block;
+      border: 0.5px solid #ccc;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+}
+
+// Enabled indicator
+$focus-indicator-width: 170px;
+
+.key-focus-container {
+  position: absolute;
+  top: 1px;
+  left: -$focus-indicator-width;
+  width: $focus-indicator-width;
+
+  .indicator {
+    width: $focus-indicator-width;
+    text-align: right;
+    padding-right: 10px;
+    font-weight: 100;
+    font-size: 0.9em;
+    color: $info-color;
+    display: none;
+  }
+  
+}
+
+.enabled .key-focus-container .indicator {
+  display: block;
+  font-size: 2.5em;
+}
+
+
+.highlight-item {
+  .exp {
+    vertical-align: 0.4em;
+    font-size: 0.75em;
+  }
+
+  .bass-item {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+
+    &.bass-root {
+      background-color: $color1;
+    }
+
+    &.bass-9 {
+      background-color: $color2;
+    }
+
+    &.bass-3 {
+      background-color: $color3;
+    }
+
+    &.bass-4 {
+      background-color: $color4;
+    }
+
+    &.bass-5 {
+      background-color: $color5;
+    }
+
+    &.bass-6 {
+      background-color: $color6;
+    }
+
+    &.bass-7 {
+      background-color: $color7;
+    }
+  }
+}

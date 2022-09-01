@@ -1,0 +1,3 @@
+export const MAX_FRET_RANGE = 8;
+export const VISIBLE_FRETS = 18;
+export const PROCESSED_FRETS = VISIBLE_FRETS + MAX_FRET_RANGE;

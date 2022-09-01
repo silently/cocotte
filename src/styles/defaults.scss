@@ -1,0 +1,48 @@
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: $bg-color;
+}
+
+fieldset {
+  border: 0;
+}
+
+button {
+  color: inherit;
+  font: inherit;
+  padding: inherit;
+  border: inherit;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+input {
+  color: inherit;
+  display: inline-block;
+  background-color: inherit;
+  cursor: text;
+  margin: inherit;
+  font: inherit;
+  padding: 1px 2px;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}

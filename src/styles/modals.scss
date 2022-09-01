@@ -1,0 +1,131 @@
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #bbb;
+  opacity: 0.8;
+} 
+.modal {
+  position: fixed;
+  top: 68px;
+  left: 50%;
+  border-radius: 8px;
+  margin-left: -300px;
+  width: 600px;
+  height: 600px;
+
+  .modal-contents {
+    width: 600px;
+    height: 600px;
+    padding: 30px;
+    overflow-y: scroll;
+  }
+}
+.share-modal, .help-modal {
+  background-color: lighten($orange, 15%);
+  color:#444;
+
+  h2 {
+    font-size: 1.15em;
+    margin: 0;
+  }
+
+  a {
+    color: darken($orange, 15%);//lighten($orange, 40%);
+    font-weight: bold;
+  }
+
+  p.light {
+    font-size: 0.85em;
+    font-style: italic;
+  }
+
+  .close-bg {
+    $size: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: $size;
+    height: $size;
+    border-left: $size solid lighten($orange, 15%);
+    border-top: $size solid darken($orange, 10%);
+    border-top-right-radius: 8px;
+  }
+  .close-action {
+    position: absolute;
+    top: -2px;
+    right: 0;
+    color: lighten($orange, 40%);
+    font-size: 1.2em;
+    width: 30px;
+    height: 30px;
+    padding-right: 7px;
+    text-align: right;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.share-modal {
+  h2 {
+    margin-bottom: 12px;
+  }
+
+  hr {
+    border: 0.5px solid darken($orange, 15%);
+    margin: 12px 0 8px;
+  }
+
+  fieldset {
+    padding: 5px 0;
+    > * {
+      display: block;
+    }
+  }
+
+
+  label {
+    margin-bottom: 5px;
+  }
+
+  .fieldset-title label {
+    font-weight: bold;
+  }
+
+  input, textarea {
+    padding: 2px 3px;
+  }
+
+  input {
+    background-color: white;
+  }
+
+  textarea {
+    background-color: lighten($orange, 20%);
+    color:#444;
+  }
+
+  textarea {
+    width: 100%;
+    outline: none;
+    font-size: 0.9em;
+    padding: 4px;
+    border: 0;
+    &.draft {
+      height: 100px;
+    }
+  }
+}
+
+.help-modal {
+  .important {
+    color: darken($orange, 15%);
+    &::before {
+      content: '➜ ';
+    }
+  }
+}
