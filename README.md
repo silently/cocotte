@@ -22,15 +22,15 @@ With the following rules:
 
 - discover voicings and fingerings
 - memorize intervals, find transitions, discover similarities between successive chords
-- in song mode: try several fingerings (stay on a region VS navigate)
+- in play mode: try several fingerings (stay on a region VS navigate)
 
 ## Features list
 
 - fingering "finder"
 - chord and grid notation tool
-- grid player
+- player
 - sharing of tunes/grids
-- listing tunes as GitHub issues
+- [listing community tunes](https://github.com/silently/cocotte/issues?q=is%3Aopen+label%3Atune+sort%3Areactions-%2B1-desc) under GitHub issues
 
 # Musical scope
 
@@ -39,18 +39,11 @@ With the following rules:
 - a restricted set of 3 and 4-notes chords (but which should be sufficient for learning purposes and includes chords from major and harmonic minor scales plus a few popular ones)
 - exhaustivity of voicings and fingerings for these chords
 
-Voicing exhaustivity means they are displayed with no preference regarding esthetics or convenience. You may find some sound better than others (a typical counter example: voicing including large intervals _are_ included in Cocotte). Drop 4 and drop 3-4 may be found rarely practical to play nor balanced. They are shown for completion, illustrating for instance the relation between close and drop 4.
+Voicing exhaustivity means they are displayed with no preference regarding esthetics or convenience. You may find some sound better than others (a typical counter example: voicing including large intervals _are_ included in *cocotte*). Drop 4 and drop 3-4 may be found rarely practical to play nor balanced. They are shown for completion, illustrating for instance the relation between close and drop 4.
 
-5 and 6-notes chords (7-note chords being more difficult to play on the guitar ^^) can't be treated systematically. Many fingerings becomes unusable for a given inversion and voicing, or require to omit a given note. In other words: your experience/taste is needed to decide how to play them (and hopefully what you learned for 3 and 4-note chords will serve as a ground)
+5 and 6-notes chords (7-note chords being more difficult to play on the guitar ^^) can't be treated systematically. Many fingerings becomes unusable for a given inversion and voicing, or require to omit a given note. In other words: your experience/taste is needed to decide how to play them (and hopefully what you learned for 3 and 4-note chords will serve as a ground).
 
-Additional reading might help contextualize the material provided by Cocotte. Let's just cite a few authors: Brett Wilmott, Mick Goodrick, Ted Greene or Peter O'Mara. If you're a French reader, I recommend books by Éditions Outre Mesure (_Guitaristes_, a multi-author book in two volumes and _Jazz mode d'emploi_ by Philippe Baudoin) and also _Technique pour Guitaristes de Tous Styles_ by Pierre Cullaz, which impulsed the idea of *cocotte*.
-
-## Voicing notation
-
-- *close* means playing the chord in the "normal" ascending order, D-F-A-C for D7
-- *dp* is used as short for "drop"
-- *dp 2* means dropping (one octave down) the second note of the chord
-- *dp 2²3* is a custom shortened notation that means "double drop 2, drop 3"
+Additional reading might help contextualize the material provided by *cocotte*. Let's just cite a few authors: Brett Wilmott, Mick Goodrick, Ted Greene or Peter O'Mara. If you're a French reader, I recommend books by Éditions Outre Mesure (_Guitaristes_, a multi-author book in two volumes and _Jazz mode d'emploi_ by Philippe Baudoin) and also _Technique pour Guitaristes de Tous Styles_ by Pierre Cullaz, which impulsed the idea of *cocotte*.
 
 ## Chord notation
 
@@ -61,9 +54,16 @@ The following symbols are used:
 - `°` is the diminished chord
 - `ø` is the half diminished chord 
 
+## Voicing notation
+
+- *close* means playing the chord in straight ascending order, D-F-A-C for D7
+- *dp* is used as short for "drop"
+- *dp 2* means dropping (one octave down) the second note of the chord
+- *dp 2²3* is a custom shortened notation that means "double drop 2 and drop 3"
+
 # Implementation
 
-*cocotte* is implemented in a relaxed functional fashion using [Ramda](https://ramdajs.com/), TypeScript and React. It's a fully front-end project.
+*cocotte* is implemented in a relaxed functional fashion using [Ramda](https://ramdajs.com/), TypeScript and React. It's a front-end-only project.
 
 Musical data structures are described in `src/domain/types`, each voicing and fingering is calculated (rather than statically defined).
 
@@ -71,6 +71,12 @@ To start the project locally, clone this repository and run:
 
 ```
 yarn start
+```
+
+To update GitHub pages-based website:
+
+```
+yarn deploy
 ```
 
 ## Missing
