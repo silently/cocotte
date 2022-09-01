@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cocotte/static/css/main.bb36771f.css",
+    "main.js": "/cocotte/static/js/main.5d350163.js",
+    "index.html": "/cocotte/index.html",
+    "main.bb36771f.css.map": "/cocotte/static/css/main.bb36771f.css.map",
+    "main.5d350163.js.map": "/cocotte/static/js/main.5d350163.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bb36771f.css",
+    "static/js/main.5d350163.js"
+  ]
+}
