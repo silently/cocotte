@@ -73,7 +73,7 @@ const resetBeat = (state: State): State => ({
 
 const computeSerializedState = (state: State): State => {
   const serializedSequence = serialize(state.sequence);
-  const link = `${window.location.origin}/#&title=${encodeURIComponent(state.title)}&tune=${serializedSequence}&bpm=${state.bpm}`
+  const link = `${window.location.origin}${window.location.pathname}/#&title=${encodeURIComponent(state.title)}&tune=${serializedSequence}&bpm=${state.bpm}`
 
   return {
     ...state,

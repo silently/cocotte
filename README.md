@@ -83,8 +83,8 @@ yarn deploy
 
 Here's a list of ideas to be implemented:
 
-- audio tick marking tempo (there's visual tick in the grid for the moment)
 - more accurate timer than setInterval (see Web Audio API)
+- other highlight possibility: focus on a given part of the fretboard (for instance: around fret 8)
 - possibility to change tuning or instrument (number of strings)
-- move chords around in the grid with drag'n'drop
+- move chords around the grid with drag'n'drop
 - other time signatures than 4/4 and possibility to split grid cells
