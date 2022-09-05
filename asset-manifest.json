@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/cocotte/static/css/main.bc2aac36.css",
-    "main.js": "/cocotte/static/js/main.82c93b4a.js",
+    "main.js": "/cocotte/static/js/main.113aafb9.js",
     "index.html": "/cocotte/index.html",
     "main.bc2aac36.css.map": "/cocotte/static/css/main.bc2aac36.css.map",
-    "main.82c93b4a.js.map": "/cocotte/static/js/main.82c93b4a.js.map"
+    "main.113aafb9.js.map": "/cocotte/static/js/main.113aafb9.js.map"
   },
   "entrypoints": [
     "static/css/main.bc2aac36.css",
-    "static/js/main.82c93b4a.js"
+    "static/js/main.113aafb9.js"
   ]
 }
