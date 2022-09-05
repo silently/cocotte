@@ -14,6 +14,9 @@ type Props = {
 
 const Nav = ({ isPlaying, isMuted, inputFocus, isModalOpen, bpm, dispatch }: Props) => (
   <div className="nav-container">
+    <div className="github-link">
+      <a href="https://github.com/silently/cocotte" target="_blank">on GitHub</a>
+    </div>
     <h1>
       <span className="c">c</span>
       <span className="o">o</span>

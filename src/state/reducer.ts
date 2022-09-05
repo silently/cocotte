@@ -83,6 +83,8 @@ const computeSerializedState = (state: State): State => {
 };
 
 const computeFingerings = (state: State): State => {
+  if (state.isAddNewCell) return state;
+
   const nexCellIndex = getNextCellIndex(state);
   return {
     ...state,

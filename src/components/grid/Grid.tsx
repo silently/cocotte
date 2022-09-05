@@ -1,5 +1,5 @@
 // lib
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, MouseEvent } from "react";
 import { times } from "ramda";
 // src
 import { ActionType } from "state/actions";
@@ -85,7 +85,8 @@ const Grid = ({
 
   const handleAdd = () => dispatch({ type: ActionType.ADD_VCHORD });
   
-  const handleDeleteGrid = () => {
+  const handleDeleteGrid = (e: MouseEvent) => {
+    if (e.detail === 0) return; // "enter" key may trigger the link if was last active UX
     if (window.confirm("Delete the whole grid?")) {
       dispatch({ type: ActionType.DELETE_GRID });
     }
@@ -160,7 +161,7 @@ const Grid = ({
             </div>);
         }, fills)}
       </div>
-      <button className="delete" onClick={handleDeleteGrid}>delete grid</button>
+      <button type="button" className="delete" onClick={handleDeleteGrid}>delete grid</button>
     </div>
   );
 };

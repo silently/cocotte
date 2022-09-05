@@ -14,7 +14,7 @@ export enum KeyFocus {
 export const MAX_GRID_LINES = 4;
 export const MAX_GRID_LENGTH = 16;
 export const BEATS_PER_BAR = 4;
-export const MAX_TITLE_LENGTH = 40;
+export const MAX_TITLE_LENGTH = 60;
 
 const createSequence = (): Sequence => ([
   {
