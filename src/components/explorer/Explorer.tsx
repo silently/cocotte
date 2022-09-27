@@ -152,7 +152,7 @@ const Explorer = ({
       </div>
       <div className="group group-color">
         <div className="heading">
-          <span>type</span>
+          <span>arpeggio type</span>
         </div>
         <div className="legend-triad-bg" />
         <div className="legend-triad">
@@ -176,7 +176,7 @@ const Explorer = ({
       </div>
       <div className="group group-highlight">
         <div className="heading">
-          <span>highlight</span>
+          <span>show focus</span>
         </div>
         <div className="legend-string">
           <span>BASS STRING...</span>

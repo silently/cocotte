@@ -1,19 +1,19 @@
 # cocotte
 
-*cocotte* is a chord visualization app for the guitar. It shows fingerings of 3 and 4-note typical chords.
+*cocotte* is a visualization app for the guitar. It shows:
 
-For a given D7 chord, the corresponding D-F-A-C arpeggio is laid out on the fretboard: root notes (all D*s* for D7) are displayed as white circles, other notes from D7 are black.
+- the full arpeggio of a given chord on the fretboard (white dots for the root, black dots for other notes)
+- possible chord fingerings of this arpeggio (grouped by different colors)
 
-Then the arpeggio is grouped by playable fingerings:
+For a given D7 chord, each colored fingerings includes the different notes of the chord (D-F-A-C) once and only once. Several fingerings are displayed:
 
-- that include each note (D-F-A-C) once and only once
-- with a given voicing (the order in which the notes are stacked: drop 2 being F-D-A-C, drop 3 A-D-F-C...)
+- depending on a given voicing (the order in which the notes are stacked, for instance drop 2 is F-D-A-C)
 - on a preferred bass (per string or per note)
 
 With the following rules:
 
 - prefer adjacent string sets and least variance on fret range when several fingerings are possible
-- respect a max fret range (8 frets, hard to play but displayed for knowledge -— can still be played as an arpeggio)
+- respect a max fret range (7 frets, hard to play but displayed for knowledge -— can still be played as an arpeggio)
 - possibly include open string notes if no other option is possible
 
 *cocotte* also provides a basic tool to create and share grid of chords, intended to try, train and memorize fingerings.

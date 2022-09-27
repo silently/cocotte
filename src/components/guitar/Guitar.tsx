@@ -48,8 +48,14 @@ const Guitar = ({
   keys
 }: Props) => (
   <div className="guitar-container">
-    {isPlaying && (
+    {isPlaying ? (
       <div className="info-container"><div>{isNext ? "next" : "current"}</div></div>
+    ) : (
+      <div className="info-container legend">
+        <p><span className="symbol-root"></span> root</p>
+        <p><span className="symbol-root"></span>+<span className="symbol-note"></span> arpeggio</p>
+        <p><span className="symbol-fingering"></span><span className="symbol-fingering"></span><span className="symbol-fingering"></span><span className="symbol-fingering"></span> fingering</p>
+      </div>
     )}
     <div className="chord-container">
       {showFingering && (

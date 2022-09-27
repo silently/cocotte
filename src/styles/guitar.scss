@@ -10,7 +10,6 @@ $lines-color: #777;
 
 .guitar-container {
   position: relative;
-  margin-bottom: 50px;
   width: $container-width;
   display: flex;
 }
@@ -32,12 +31,48 @@ $lines-color: #777;
   }
   .info-container {
     position: absolute;
-    width: 70px;
+    width: 100px;
+    right: -120px;
     height: $guitar-height;
-    right: -90px;
     display: flex;
     align-items: center;
     font-weight: 100;
+    
+    &.legend {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+
+      p {
+        margin: 1px 0;
+        font-size: 13px;
+      }
+
+      [class^="symbol-"] {
+        display: inline-block;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        transform: skewX(10deg);
+        border: 1px solid #333;
+      }
+      .symbol-root {
+        margin-left: -1px;
+      }
+      .symbol-note {
+        background: #333;
+      }
+      .symbol-fingering {
+        margin-left: -2px;
+        background: #333;
+        width: 11px;
+        height: 11px;
+        border: 2px solid #ba8;
+        &:nth-child(2) {
+          background: white;
+        }
+      }
+    }
   }
 
   .info {

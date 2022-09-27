@@ -1,8 +1,8 @@
 $cell-size: 25px;
 
 .explorer.controller {
-  position: fixed;
-  bottom: 5px;
+  position: relative;
+  margin-top: 50px;
   width: $container-width;
   height: 220px;
   display: flex;
@@ -72,7 +72,6 @@ $cell-size: 25px;
     [class^="legend-"] {
       display: flex;
       position: absolute;
-      z-index: -1;
       border-radius: 4px;
       font-weight: bold;
       font-size: 0.6em;

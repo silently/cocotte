@@ -5,6 +5,7 @@
   justify-content: space-between;
 
   h1 {
+    margin-top: -10px;
     color: #606c76;
     font-size: 4.5em;
     font-weight: 300;
@@ -21,6 +22,12 @@
     }
     .c {
       color: $orange;
+    }
+    .motto {
+      margin-top: -10px;
+      font-size: 14px;
+      font-weight: bold;
+      padding-left: 4px;
     }
   }
 

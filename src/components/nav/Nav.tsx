@@ -25,6 +25,7 @@ const Nav = ({ isPlaying, isMuted, inputFocus, isModalOpen, bpm, dispatch }: Pro
       <span className="t pad">t</span>
       <span className="t">t</span>
       <span className="e">e</span>
+      <div className="motto">chord voicing trainer for guitar</div>
     </h1>
     <Player isPlaying={isPlaying} isMuted={isMuted} inputFocus={inputFocus} isModalOpen={isModalOpen} bpm={bpm} dispatch={dispatch} />
   </div>
