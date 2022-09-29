@@ -36,6 +36,7 @@ const renderKey: (key: ScaleKey) => React.ReactNode = (key) => {
   return (
     <div key={`${string}-${fret}`} className={className}>
       <div className="bg" />
+      <div className="twice" />
     </div>
   );
 };

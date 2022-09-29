@@ -287,6 +287,18 @@ $lines-color: #777;
             border-left-color: $color;
             border-bottom-color: $color;
           }
+          .twice {
+            width: calc(100% + 6.5px);
+            height: calc(100% + 6.5px);
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            background: linear-gradient(to bottom, transparent 42%, #333 42% 58%, transparent 58%);
+            transform: rotate(40deg) translateX(-0.3px);
+          }
+          &.interval-1 .twice {
+            background: linear-gradient(to bottom, transparent 42%, white 42% 58%, transparent 58%);
+          }
         }
       }
     }

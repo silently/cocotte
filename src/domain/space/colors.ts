@@ -95,14 +95,14 @@ const Index: { [key: string]: Color } = {
   },
   aug7M: {
     id: "aug7M",
-    name: "∆+",
-    display: { exp: "∆+" },
+    name: "∆♯5",
+    display: { exp: "∆♯5" },
     intervals: [Per1, Maj3, Aug5, Maj7],
   },
   aug7: {
     id: "aug7",
-    name: "7+",
-    display: { exp: "7+" },
+    name: "7♯5",
+    display: { exp: "7♯5" },
     intervals: [Per1, Maj3, Aug5, Min7],
   },
   sus7: {
@@ -144,13 +144,13 @@ const Index: { [key: string]: Color } = {
   aug: {
     id: "aug",
     name: "aug",
-    display: { base: "aug" },
+    display: { exp: "♯5" },
     intervals: [Per1, Maj3, Aug5],
   },
   altb: {
     id: "altb",
     name: "alt♭",
-    display: { base: "alt♭" },
+    display: { exp: "♭5" },
     intervals: [Per1, Maj3, Dim5],
   },
   dim: {

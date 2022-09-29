@@ -27,9 +27,9 @@ const Index: { [key: string]: SubTable } = {
     offset: { x: 4, y: -1 },
     matrix: [
       [C.maj, C.min, C.dim, C.aug, C.altb, C.sus7],
-      [C.maj7, C.m7M, C.dim7M, C.aug7M, C.maj5b, C.dom79],
+      [C.maj7, C.m7M, null, C.aug7M, C.maj5b, C.dom79],
       [C.dom, C.m7, C.hdim7, C.aug7, C.dom5b, C.dom79b],
-      [C.maj6, C.min6, C.dim7, null, C.maj65b, C.maj69],
+      [C.maj6, C.min6, C.dim7, null, null, C.maj69],
     ],
   }
 };
